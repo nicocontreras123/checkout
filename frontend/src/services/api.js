@@ -1,7 +1,8 @@
-const API_BASE = import.meta.env.VITE_API_URL || '/api'
+const API_BASE = window.ENV?.API_URL || import.meta.env.VITE_API_URL || '/api'
 
 // Log para debug en Railway
 console.log('🔧 API Configuration:')
+console.log('  window.ENV?.API_URL:', window.ENV?.API_URL)
 console.log('  VITE_API_URL:', import.meta.env.VITE_API_URL)
 console.log('  API_BASE:', API_BASE)
 console.log('  Mode:', import.meta.env.MODE)
