@@ -1,0 +1,342 @@
+/* Cart Section */
+.cart-section {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+  position: sticky;
+  top: 2rem;
+}
+
+/* Estilizar scrollbar del carrito */
+.cart-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cart-section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.cart-section::-webkit-scrollbar-thumb {
+  background: var(--walmart-blue);
+  border-radius: 10px;
+}
+
+.cart-section::-webkit-scrollbar-thumb:hover {
+  background: var(--walmart-blue-dark);
+}
+
+.cart-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--walmart-gray-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 2rem;
+  color: var(--walmart-gray);
+}
+
+.cart-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Cart Items */
+.cart-items {
+  max-height: 250px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  padding-right: 0.5rem;
+}
+
+/* Estilizar scrollbar de cart-items */
+.cart-items::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cart-items::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+}
+
+.cart-items::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+/* Saved Items */
+.saved-items {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #eee;
+}
+
+.saved-items h3 {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  color: var(--walmart-gray-dark);
+}
+
+.saved-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.move-to-cart-btn {
+  background: var(--walmart-blue);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.move-to-cart-btn:hover {
+  background: var(--walmart-blue-dark);
+}
+
+/* Free Shipping Banner */
+.free-shipping-banner {
+  background: rgba(0, 113, 220, 0.05);
+  border: 1px solid rgba(0, 113, 220, 0.2);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.free-shipping-text {
+  font-size: 0.875rem;
+  color: var(--walmart-gray-dark);
+  margin-bottom: 0.75rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--walmart-blue) 0%, var(--walmart-blue-dark) 100%);
+  transition: width 0.3s ease;
+}
+
+.free-shipping-achieved {
+  background: rgba(46, 125, 50, 0.1);
+  border: 1px solid var(--walmart-green);
+  color: var(--walmart-green);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* Payment Methods */
+.payment-section {
+  margin: 1rem 0;
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.payment-section h3 {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  color: var(--walmart-gray-dark);
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.payment-option:hover {
+  border-color: var(--walmart-blue);
+}
+
+.payment-option.selected {
+  border-color: var(--walmart-blue);
+  background: rgba(0, 113, 220, 0.05);
+}
+
+.payment-option input {
+  accent-color: var(--walmart-blue);
+}
+
+.payment-info {
+  flex: 1;
+}
+
+.payment-name {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.payment-discount {
+  font-size: 0.75rem;
+  color: var(--walmart-green);
+  font-weight: 600;
+}
+
+/* Summary */
+.summary {
+  margin-top: 1rem;
+  background: var(--white);
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.summary h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--walmart-gray-dark);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  color: var(--walmart-gray-dark);
+}
+
+.summary-row.discount-row {
+  color: var(--walmart-green);
+}
+
+.discount-value {
+  color: var(--walmart-green);
+  font-weight: 600;
+}
+
+.summary-row.subtotal-row {
+  font-weight: 600;
+  padding-top: 1rem;
+}
+
+.summary-divider {
+  height: 1px;
+  background: #ddd;
+  margin: 0.75rem 0;
+}
+
+.summary-row.total-row {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  color: var(--walmart-gray-dark);
+}
+
+.total-amount {
+  color: var(--walmart-blue);
+}
+
+.payment-summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: rgba(0, 113, 220, 0.05);
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.payment-method-name {
+  color: var(--walmart-blue);
+  font-weight: 600;
+}
+
+.rewards-banner {
+  background: linear-gradient(135deg, var(--walmart-yellow) 0%, var(--walmart-yellow-dark) 100%);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--walmart-gray-dark);
+}
+
+/* Discounts Detail */
+.discounts-detail {
+  background: rgba(46, 125, 50, 0.05);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+}
+
+.discount-detail-item {
+  font-size: 0.75rem;
+  color: var(--walmart-green);
+  padding: 0.25rem 0;
+}
+
+/* Checkout Button */
+.checkout-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--walmart-yellow);
+  color: var(--walmart-gray-dark);
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 1rem;
+}
+
+.checkout-btn:hover {
+  background: var(--walmart-yellow-dark);
+}
+
+.checkout-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .cart-section {
+    order: -1;
+    position: relative;
+    top: 0;
+    max-height: none;
+  }
+}

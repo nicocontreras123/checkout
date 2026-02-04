@@ -1,0 +1,20 @@
+#!/bin/bash
+# Maven Wrapper - Uses system Maven or installs if needed
+
+set -e
+
+# Try to use SDKMAN Java if available
+if [ -d "$HOME/.sdkman/candidates/java/current" ]; then
+    export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
+fi
+
+# Check for Maven
+if command -v mvn &> /dev/null; then
+    exec mvn "$@"
+else
+    echo "Maven not found. Please install Maven:"
+    echo "  macOS:   brew install maven"
+    echo "  Ubuntu:  sudo apt install maven"
+    echo "  Or use:  docker-compose up --build"
+    exit 1
+fi

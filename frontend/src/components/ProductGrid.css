@@ -1,0 +1,15 @@
+/* Products Section */
+.products-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--walmart-gray-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}

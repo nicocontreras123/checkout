@@ -1,0 +1,63 @@
+/* Walmart Brand Colors */
+:root {
+  --walmart-blue: #0071dc;
+  --walmart-blue-dark: #004c91;
+  --walmart-yellow: #ffc220;
+  --walmart-yellow-dark: #f5b400;
+  --walmart-green: #2e7d32;
+  --walmart-red: #c62828;
+  --walmart-gray-light: #f2f8fd;
+  --walmart-gray: #74767c;
+  --walmart-gray-dark: #2e2f32;
+  --white: #ffffff;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+  background-color: var(--walmart-gray-light);
+  min-height: 100vh;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  background-color: var(--walmart-gray-light);
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--walmart-gray-dark);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: var(--walmart-gray-light);
+}
+
+/* Main Layout */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
