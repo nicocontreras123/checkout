@@ -6,6 +6,15 @@ spring:
   profiles:
     active: ${SPRING_PROFILES_ACTIVE:local}
 
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+    try-it-out-enabled: true
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+
 ---
 # Local Development Profile (H2)
 spring:
